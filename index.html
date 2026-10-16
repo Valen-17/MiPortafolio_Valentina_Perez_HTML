@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entrada de blog: Aplicando el lenguaje de marcado HTML y la importancia de Bootstrap">
+  <title>Aplicando el lenguaje de marcado HTML | Blog Portafolio | Valentina Pérez</title>
+
+  <!-- Tipografía -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+
+  <!-- Framework: Bootstrap 5 (CSS) e íconos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- Barra de progreso de lectura -->
+  <div id="progresoLectura"></div>
+
+  <!-- ===== Barra de navegación ===== -->
+  <nav id="navPrincipal" class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#inicio">
+        <i class="bi bi-code-slash"></i> Mi Portafolio | Valentina Pérez
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#entrada">Entrada</a></li>
+          <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
+        </ul>
+        <a href="#entrada" class="btn btn-azul rounded-pill px-4">Leer entrada</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Portada (hero) ===== -->
+  <header id="inicio" class="hero">
+    <div class="container position-relative">
+      <div class="text-center pt-5">
+        <span class="etiqueta etiqueta-oscura">Blog portafolio -<span class="texto-azul">Tarea "Mi portafolio"</span></span>
+
+        <h1 class="hero-titulo mt-4">
+          Aplicando el lenguaje<br>de marcado <span class="resaltado">HTML</span>
+          <i class="bi bi-filetype-html icono-titulo"></i>
+        </h1>
+
+        <p class="hero-subtitulo mx-auto">
+          ¿Por qué herramientas de desarrollo como Bootstrap hacen que crear páginas HTML
+          sea más rápido, ordenado y adaptable a cualquier dispositivo?
+        </p>
+
+        <a href="#entrada" class="btn btn-azul btn-flecha rounded-pill mt-2">
+          Leer el resumen <span class="circulo-flecha"><i class="bi bi-arrow-right"></i></span>
+        </a>
+      </div>
+
+      <!-- Tarjetas flotantes -->
+      <div class="row g-4 align-items-start mt-5 tarjetas-hero">
+        <!-- Izquierda -->
+        <div class="col-lg-3 d-none d-lg-block">
+          <div class="tarjeta-blanca flotar">
+            <p class="fw-bold mb-0 small">Sistema de rejilla</p>
+            <p class="texto-gris mini mb-2">Bootstrap Grid</p>
+            <div class="d-flex align-items-center gap-2">
+              <span class="numero-grande">12</span>
+              <span class="badge rounded-pill text-bg-primary mini"><i class="bi bi-check2"></i> columnas</span>
+            </div>
+            <p class="texto-gris mini mb-3">Diseños que se adaptan solos</p>
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center gap-2">
+                <span class="icono-circulo"><i class="bi bi-grid-3x3-gap"></i></span>
+                <span class="mini"><strong>Responsive</strong><br>celular - tablet - PC</span>
+              </div>
+            </div>
+          </div>
+          <div class="esqueleto mt-4"><span class="punto azul"></span><span class="lineas"></span></div>
+          <div class="esqueleto ms-5 mt-3"><span class="punto oscuro"></span><span class="lineas"></span></div>
+        </div>
+
+        <!-- Centro -->
+        <div class="col-lg-6">
+          <div class="tarjeta-centro mx-auto">
+            <span class="etiqueta etiqueta-clara">Del código al navegador</span>
+            <h2 class="h4 mt-3 mb-3">Escribe menos CSS,<br><span class="texto-gris">obtén más diseño.</span></h2>
+            <pre class="codigo"><code><span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"container"</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"row"</span><span class="c-tag">&gt;</span>
+    <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"col-md-6"</span><span class="c-tag">&gt;</span>...<span class="c-tag">&lt;/div&gt;</span>
+    <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"col-md-6"</span><span class="c-tag">&gt;</span>...<span class="c-tag">&lt;/div&gt;</span>
+  <span class="c-tag">&lt;/div&gt;</span>
+<span class="c-tag">&lt;/div&gt;</span></code></pre>
+            <div class="vista-previa">
+              <div class="vp-barra"><span></span><span></span><span></span></div>
+              <div class="vp-cuerpo">
+                <div class="vp-col"></div>
+                <div class="vp-col"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Derecha -->
+        <div class="col-lg-3 d-none d-lg-block">
+          <div class="tarjeta-vidrio flotar flotar-lento">
+            <span class="etiqueta etiqueta-vidrio"><i class="bi bi-stars"></i> Componentes listos</span>
+            <p class="mini text-white-50 mt-3 mb-1">Incluidos en Bootstrap</p>
+            <ul class="lista-componentes">
+              <li><i class="bi bi-menu-button-wide"></i> Navbar</li>
+              <li><i class="bi bi-card-heading"></i> Cards</li>
+              <li><i class="bi bi-window-stack"></i> Modales</li>
+              <li><i class="bi bi-ui-checks"></i> Formularios</li>
+            </ul>
+            <a href="#beneficios" class="circulo-flecha blanco" aria-label="Ver beneficios"><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Entrada del blog (resumen) ===== -->
+    <section id="entrada" class="seccion-clara py-5">
+      <div class="container">
+        <div class="text-center mb-5 aparecer">
+          <span class="etiqueta etiqueta-clara">Entrada del blog</span>
+          <h2 class="titulo-seccion mt-3">La importancia de Bootstrap<br>en la creación de páginas HTML</h2>
+        </div>
+
+        <article class="articulo mx-auto aparecer">
+          <div class="d-flex flex-wrap align-items-center gap-3 mb-4 meta">
+            <span class="avatar">VP</span>
+            <div class="me-auto">
+              <strong class="d-block">Valentina Alejandra Pérez Cardona</strong>
+              <span class="texto-gris small">Octubre 2026</span>
+            </div>
+            <span class="badge rounded-pill text-bg-light border"><i class="bi bi-clock"></i> 2 min de lectura</span>
+            <span class="badge rounded-pill text-bg-primary"><i class="bi bi-fonts"></i> <span id="contadorPalabras">—</span> palabras</span>
+          </div>
+
+          <div id="contenidoResumen">
+            <p>
+              Cuando empezamos en el desarrollo web, lo primero que aprendemos es HTML. Es el esqueleto de
+              una página: nos permite colocar texto, imágenes, botones y estructuras. Pero en un proyecto
+              real, hacer todo el diseño a mano con CSS y JavaScript puro se vuelve una tarea pesada, lenta
+              y propensa a errores.
+            </p>
+            <p>
+              Para solucionar esto existen herramientas como Bootstrap, un framework <em>front-end</em> open
+              source que nos ofrece componentes ya diseñados y probados: botones, barras de navegación,
+              modales, tarjetas y carruseles. Lo mejor es su sistema de <em>grid</em> (rejilla) de 12 columnas,
+              con el que logramos que la web sea <em>responsive</em> y se adapte sola a monitores, tablets o
+              celulares sin escribir cientos de <em>media queries</em> en CSS.
+            </p>
+            <p>En el día a día, integrar Bootstrap nos da ventajas muy claras:</p>
+            <ul>
+              <li><strong>Acelera el desarrollo:</strong> No perdemos tiempo diseñando elementos básicos desde cero.</li>
+              <li><strong>Mantiene la coherencia:</strong> La interfaz se ve uniforme en todas las pantallas y secciones.</li>
+              <li><strong>Evita problemas de compatibilidad:</strong> Los componentes funcionan bien en los navegadores modernos.</li>
+              <li><strong>Incluye accesibilidad:</strong> Trae buenas prácticas y atributos ARIA integrados.</li>
+              <li><strong>Tiene soporte constante:</strong> Su documentación es enorme y la comunidad responde los problemas comunes.</li>
+            </ul>
+            <p class="mb-0">
+              Eso sí, usar Bootstrap no significa olvidarnos de HTML. Si no entendemos la semántica de las
+              etiquetas, no sabremos qué clases aplicar ni cómo personalizar el diseño. Al final, la clave
+              está en estructurar bien con HTML y apoyarnos en frameworks para construir sitios web
+              profesionales, ágiles y fáciles de mantener.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Beneficios ===== -->
+    <section id="beneficios" class="seccion-clara pb-5">
+      <div class="container">
+        <div class="text-center mb-5 aparecer">
+          <span class="etiqueta etiqueta-clara">Beneficios clave</span>
+          <h2 class="titulo-seccion mt-3">¿Por qué usar Bootstrap?</h2>
+          <p class="texto-gris mx-auto subtitulo-seccion">
+            Las ventajas que aporta un framework al construir páginas con HTML.
+          </p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+          <div class="col aparecer">
+            <div class="tarjeta-beneficio destacada">
+              <span class="icono-cuadro"><i class="bi bi-lightning-charge"></i></span>
+              <h3>Productividad</h3>
+              <p>Componentes probados y listos para usar reducen el tiempo de desarrollo.</p>
+            </div>
+          </div>
+          <div class="col aparecer">
+            <div class="tarjeta-beneficio">
+              <span class="icono-cuadro"><i class="bi bi-phone"></i></span>
+              <h3>Diseño responsive</h3>
+              <p>La rejilla de 12 columnas adapta la página a celulares, tabletas y computadores.</p>
+            </div>
+          </div>
+          <div class="col aparecer">
+            <div class="tarjeta-beneficio">
+              <span class="icono-cuadro"><i class="bi bi-palette"></i></span>
+              <h3>Consistencia</h3>
+              <p>Todos los elementos comparten la misma línea visual en todo el sitio.</p>
+            </div>
+          </div>
+          <div class="col aparecer">
+            <div class="tarjeta-beneficio">
+              <span class="icono-cuadro"><i class="bi bi-browser-chrome"></i></span>
+              <h3>Compatibilidad</h3>
+              <p>Funciona de forma similar en los navegadores modernos.</p>
+            </div>
+          </div>
+          <div class="col aparecer">
+            <div class="tarjeta-beneficio">
+              <span class="icono-cuadro"><i class="bi bi-universal-access"></i></span>
+              <h3>Accesibilidad</h3>
+              <p>Muchos componentes incluyen atributos ARIA y buenas prácticas por defecto.</p>
+            </div>
+          </div>
+          <div class="col aparecer">
+            <div class="tarjeta-beneficio">
+              <span class="icono-cuadro"><i class="bi bi-people"></i></span>
+              <h3>Comunidad</h3>
+              <p>Abundante documentación, ejemplos y soporte para aprender y resolver dudas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Pie de página ===== -->
+  <footer class="pie text-center py-4">
+    <small>&copy; <span id="anio"></span> Valentina Alejandra Pérez Cardona - Blog portafolio - Hecho con HTML, CSS, JavaScript y Bootstrap</small>
+  </footer>
+
+  <!-- Framework: Bootstrap 5 (JS) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JavaScript propio -->
+  <script src="js/main.js"></script>
+</body>
+</html>
